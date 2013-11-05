@@ -1,0 +1,25 @@
+[alias]
+	st = status
+	co = checkout
+	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+	l = log --graph --pretty=format:'%C(yellow)%h%C(cyan)%d%Creset %s %C(white)- %an, %ar%Creset'
+	ll = log --stat --abbrev-commit
+	d = diff --color-words
+	nffmerge = merge --no-ff
+	nice = log --all --graph --decorate --oneline -n30
+[user]
+	name = Lars-Olof Moilanen
+	email = lars.olof.moilanen@gmail.com
+[color]
+	ui = true
+[core]
+	excludesfile = /Users/lamoi/.gitignore_global
+	pager = less -r
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[credential]
+	helper = cache --timeout 360000
+[push]
+	default = simple
+
